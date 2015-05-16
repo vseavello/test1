@@ -1,16 +1,21 @@
 <html>
 <head>
-  <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
-  <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print"> 
-  <!--[if lt IE 8]>
-  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
-  <![endif]-->
-
+  {% include css.html %}
   <style>
     div.header {
       text-align: center;
       color: green;
       background: azure;
+      padding-top:0.5em;
+      padding-bottom:0.5em;
+      padding-right:10px;
+      margin-right:0px;
+    }
+    div.header.last {
+      padding-right:0px;
+    }
+    div.header:hover {
+      background: yellow;
     }
   </style>
 </head>
