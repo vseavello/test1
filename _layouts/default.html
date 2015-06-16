@@ -1,3 +1,9 @@
-{% include header.html %}
-{{ content }}
-{% include footer.html %}
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+    <body style="background-color:#00b3fe">
+        {% include nav.html %}
+            {{ content }}
+        {% include footer.html %}
+    </body>
+</html>
