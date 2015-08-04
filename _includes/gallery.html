@@ -16,7 +16,9 @@
         <br/>
         <br/>
       {% endif %}
-    <hr>
+    {% if forloop.last == false %}
+      <hr>
+    {% endif %}
     {% endfor %}
   </div>
 </div>
