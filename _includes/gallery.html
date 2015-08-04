@@ -9,11 +9,10 @@
       {% if image.title %}
         <strong>{{ image.title }}</strong>
         <br/>
-        <br/>
       {% endif %}
       {% if image.blurb %}
-        {{ image.blurb }}
         <br/>
+        {{ image.blurb }}
         <br/>
       {% endif %}
     {% if forloop.last == false %}
