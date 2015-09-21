@@ -4,7 +4,7 @@
       {% cycle 'add_rows': '<div class="row" style="margin-top:1em; margin-bottom:1em">', nil, nil %}
       <div class="col-md-4">
         <a href="/assets/img/{{ include.gallery_name }}/{{ image.name }}">
-          <img src="/assets/img/{{ include.gallery_name }}/{{ image.name }}" style="width:250px"/>
+          <img src="/assets/img/{{ include.gallery_name }}/{{ image.name }}" class="{{ include.imgclass }}" style="width:250px"/>
         </a>
         {% if image.title %}
           <h3>{{ image.title }}</h3>
