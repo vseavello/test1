@@ -1,12 +1,13 @@
 cofounder_image:
 - name: cofounders.jpg
-  title: Diane Hansen and Mary Dennison, CoFounders
+  title: Diane Hansen and Mary Dennison
   blurb: Mary’s experience as an OR/RN has permitted her to be a very valuable part of surgical/medical teams to all parts of the globe – Uzbekistan, Nepal, Vietnam, Kenya, Rwanda, South and Central America.  While on these missions she serves as an integral part of a surgical team consisting of National and International health professionals who provide one-visit, surgical care for children in country.  She also supports health science education by participating in international health teaching collaborations.  In addition, her relationship with local medical providers and facilities have given us the support/resources that are needed to care for the children who come to the U.S.<br/><br/> As well as traveling around the world with medical teams, Diane has committed herself to advocating for children with medical needs – medically, educationally and emotionally – and providing safe and healthy homes for them while they have treatment in the US. She has created many programs in rural areas of Guatemala including a midwife education & support group. She is committed to supporting continued education for children returning home that otherwise would not have the opportunity, and for finding resources for children with ongoing medical needs once they return home.
 
-staff_images:
+board_image:
 - name: Board.JPG
-  title: Board of Directors
   blurb: A collaboration of thoughtful, committed, dedicated, friends whom we respect, enjoy, and appreciate.
+
+board_member_images:
 - name: TerryMartaus.jpg
   title: Terry Martaus
   blurb: Therese (Terry) Martaus is a board certified Family Nurse Practitioner and currently works in an Internal Medicine clinic for Providence Health Services. She has over 30 years experience working in health care services.  She has led and participated in medical and humanitarian services internationally including Honduras, Guatemala, Nicaragua, Peru, Indonesia, Rwanda, Uganda.
@@ -16,19 +17,26 @@ staff_images:
 - name: RebeccaSynders.jpg
   title: Rebecca Snyders
   blurb: Rebecca has 30 years of experience in health care communications and marketing. In addition to working for hospitals, school districts and charities such as the American Cancer Society, she also has served as a volunteer for a number of non-profits related to health, children and education and most recently served as a board member and then executive director for a national organization providing health care to children. She now brings her experience and passion to A Child’s Passport to Health as a board member and public relations advisor.
-- name: DanielleCP2H.jpg
-- name: Doris for web.jpg
-  title: Doris Guerrero
-- name: IMG_0177.JPG
-  title: Danielle Moody
-- name: JoAnn.jpg
-  title: JoAnne DeLazzari
+
+staff_images:
+- name: SmallAmyBarrow.jpg
+  title: Amy Barrow
 - name: Leslie for Web.jpg
   title: Leslie Gill
-- name: Maisie web.jpg
-  title: Maisie Thompson
-- name: Paul Rose .jpg
-  title: Paul Rose
+- name: Doris for web.jpg
+  title: Doris Guerrero
+- name: Danielle for web.jpg
+  title: Danielle Moody
 - name: Roby for web.jpg
   title: Robi Naimi
+- name: Maisie web.jpg
+  title: Maisie Thompson
+- name: DanielleCP2H.jpg
+
+partners_in_heart:
+- name: JoAnn.jpg
+  title: JoAnne DeLazzari
 - name: StephJPG.JPG
+  title: Stephanie Olafsen
+- name: Paul Rose .jpg
+  title: Paul Rose

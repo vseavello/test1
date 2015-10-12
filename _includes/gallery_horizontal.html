@@ -1,0 +1,27 @@
+<div class="container" style="color:white; font-size:1.2em; text-align:center; margin-top:2em">
+  {% if include.title %}
+    <div style="text-align:center; margin-bottom:2em">
+      <h2>{{ include.title }}</h2>
+    </div>
+  {% endif %}
+  {% for image in {{include.images}} %}
+    <div class="row" style="margin-top:2em; margin-bottom:2em">
+      <div class="col-md-3 col-md-offset-1">
+        {% if image.title %}
+          <strong>{{ image.title }}</strong>
+          <br/>
+        {% endif %}
+        <a href="/assets/img/{{ include.gallery_name }}/{{ image.name }}">
+          <img src="/assets/img/{{ include.gallery_name }}/{{ image.name }}" style="width:200px"/>
+        </a>
+      </div>
+      <div class="col-md-7">
+        {% if image.blurb %}
+          <br/>
+          {{ image.blurb }}
+          <br/>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

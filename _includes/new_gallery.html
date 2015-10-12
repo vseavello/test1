@@ -23,6 +23,11 @@
       </div>
       {% cycle 'close_rows': nil, nil, '</div>' %}
     {% endfor %}
-    {% cycle 'close_rows': '</div>', '</div>', nil %}
+    {% assign mod = include.images.size | modulo: 3 %}
+    {% assign fix = 3 | minus: mod | modulo: 3 %}
+    {% for i in (1..fix)) %}
+      {% cycle 'add_rows': '<div class="row" style="margin-top:1em; margin-bottom:1em">', nil, nil %}
+      {% cycle 'close_rows': nil, nil, '</div>' %}
+    {% endfor %}
   </div>
 </div>
