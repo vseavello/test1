@@ -16,9 +16,9 @@
         <br/>
       {% endif %}
       {% if image.blurb %}
-        <br/>
-        {{ image.blurb }}
-        <br/>
+        <div style="margin-top:2em; text-align:justify">
+          {{ image.blurb }}
+        </div>
       {% endif %}
     {% if forloop.last == false %}
       <hr>
