@@ -7,13 +7,17 @@
   {% for image in {{include.images}} %}
     <div class="row" style="margin-top:2em; margin-bottom:2em">
       <div class="col-md-3 col-md-offset-1">
+        <div>
+          <a href="/assets/img/{{ include.gallery_name }}/{{ image.name }}">
+            <img src="/assets/img/{{ include.gallery_name }}/{{ image.name }}" style="width:200px"/>
+          </a>
+        </div>
+        <div style="margin-top:0.75em">
         {% if image.title %}
           <strong>{{ image.title }}</strong>
           <br/>
         {% endif %}
-        <a href="/assets/img/{{ include.gallery_name }}/{{ image.name }}">
-          <img src="/assets/img/{{ include.gallery_name }}/{{ image.name }}" style="width:200px"/>
-        </a>
+        </div>
       </div>
       <div class="col-md-7">
         {% if image.blurb %}
