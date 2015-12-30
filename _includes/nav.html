@@ -12,6 +12,12 @@
   .navbar-default .navbar-nav > li > a:hover {
     color:#00b3fe;
   }
+  .navbar-default .navbar-nav > li > ul > li > a {
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    text-align:center;
+  }
 </style>
 <div class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:#384452">
   <div class="container">
@@ -26,15 +32,20 @@
     </div>
     <div class="navbar-collapse collapse navbar-right">
       <ul class="nav navbar-nav">
-        <li {% if page.title == "Home" %}class="active"{% endif %}><a href="{{"/" | prepend: site.baseurl }}">HOME</a></li>
-        <li {% if page.title == "Services" %}class="active"{% endif %}><a href="{{"/services.html" | prepend: site.baseurl }}">SERVICES</a></li>
-        <li {% if page.title == "Contact Us" %}class="active"{% endif %}><a href="{{"/contact_us.html" | prepend: site.baseurl }}">CONTACT US</a></li>
-        <li {% if page.title == "Our Kids" %}class="active"{% endif %}><a href="{{"/our_kids.html" | prepend: site.baseurl }}">OUR KIDS</a></li>
-        <li {% if page.title == "Our Mission" %}class="active"{% endif %}><a href="{{"/our_mission.html" | prepend: site.baseurl }}">OUR MISSION</a></li>
-        <li {% if page.title == "Our Story" %}class="active"{% endif %}><a href="{{"/our_story.html" | prepend: site.baseurl }}">OUR STORY</a></li>
-        <li {% if page.title == "Meet The Staff" %}class="active"{% endif %}><a href="{{"/meet_the_staff.html" | prepend: site.baseurl }}">MEET THE STAFF</a></li>
-        <li {% if page.title == "Donate" %}class="active"{% endif %}><a href="{{"/donate.html" | prepend: site.baseurl }}">DONATE</a></li>
-        <li {% if page.title == "Our Partners" %}class="active"{% endif %}><a href="{{"/our_partners.html" | prepend: site.baseurl }}">OUR PARTNERS</a></li>
+        <li><a href="{{"/" | prepend: site.baseurl }}">HOME</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" type="button" data-toggle="dropdown">ABOUT US<span class="caret"></span></a>
+          <ul class="dropdown-menu" style="background-color:#384452">
+            <li><a href="{{"/our_story.html" | prepend: site.baseurl }}">OUR STORY</a></li>
+            <li><a href="{{"/our_mission.html" | prepend: site.baseurl }}">OUR MISSION</a></li>
+            <li><a href="{{"/contact_us.html" | prepend: site.baseurl }}">CONTACT US</a></li>
+          </ul>
+        </li>
+        <li><a href="{{"/services.html" | prepend: site.baseurl }}">SERVICES</a></li>
+        <li><a href="{{"/meet_the_staff.html" | prepend: site.baseurl }}">OUR STAFF</a></li>
+        <li><a href="{{"/our_kids.html" | prepend: site.baseurl }}">OUR KIDS</a></li>
+        <li><a href="{{"/our_partners.html" | prepend: site.baseurl }}">OUR PARTNERS</a></li>
+        <li><a href="{{"/donate.html" | prepend: site.baseurl }}">DONATE</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
