@@ -1,0 +1,14 @@
+<html ng-app>
+<head>
+  <title>Vince's First Angular App</title>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+</head>
+<body ng-controller="ItemListController">
+<input ng-model="query" type=text>
+<ul>
+  <li ng-repeat="item in items">
+    <a href="#/{{item.id}}">{{item.name}}</a>
+  </li>
+</ul>
+</body>
+</html>
