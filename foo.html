@@ -46,9 +46,10 @@ function getCP2HPosts()
 	url  += "?access_token=" + accesstoken;
 	url  += "&expires=" + expires;
 	url  += "&fields=" + fields;
+                //url: "http://cp2h.vseavello.com/getPosts.php",
 
 	$.ajax({
-                url: "http://cp2h.vseavello.com/getPosts.php",
+                url: url,
                 type: "GET",
                 dataType: "json"
          })
