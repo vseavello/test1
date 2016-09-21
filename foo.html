@@ -57,11 +57,11 @@ function getCP2HPosts()
 		//$("#posts").append("<PRE>" + $.dump(data) + "</PRE>");
 
                 var html = "no data.";
-                if (data)
+                if (data.data)
                 {
                         html = "<div class='news'>\n";
                         html += url + "\n";
-                        $(data).each(function(idx, dobj) {
+                        $(data.data).each(function(idx, dobj) {
                                 //if (idx < 2)
                                 {
                                         if (idx > 0)
