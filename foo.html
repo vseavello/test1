@@ -53,7 +53,74 @@ function getCP2HPosts()
                 dataType: "json"
          })
         .done(function( data ) {
-		$("#posts").append("<PRE>" + $.dump(data) + "</PRE>");
+		//$("#posts").append("<PRE>" + $.dump(data) + "</PRE>");
+
+                var html = "no data.";
+                if (data)
+                {
+                        html = "<div class='news'>\n";
+                        $(data).each(function(idx, dobj) {
+                                //if (idx < 2)
+                                {
+                                        if (idx > 0)
+                                                html += "<HR>\n";
+                                        //html += "<PRE>" + $.dump(dobj) + "\n</PRE>\n";
+                                        if (dobj.updated_time)
+                                        {
+                                                var mydt = dobj.updated_time.substr(0, dobj.updated_time.indexOf('+'));
+                                                var dt = new Date(mydt);
+                                                //html += "Posted: " + dt.format("ddd, mmm dd, yyyy hh:M TT") + "<BR>\n";
+                                                html += "<span class='postdate'>Posted: " + dt.toString() + "</span>\n";
+                                        }
+                                        else if (dobj.created_time)
+                                        {
+                                                var mydt = dobj.created_time.substr(0, dobj.created_time.indexOf('+'));
+                                                var dt = new Date(mydt);
+                                                html += "<span class='postdate'>Posted: " + dt.toString() + "</span>\n";
+                                        }
+                                        if (dobj.story)
+                                                html += "<div apptype='story'><p class='newstitle'>" + dobj.story + "</p></div>\n";
+                                        else
+                                                html += "<BR>\n";
+                                        //if (dobj.picture) html += "<img src='" + dobj.picture + "'>\n";
+                                        if (dobj.link && (dobj.type == "photo" || dobj.type == "link"))
+                                        {
+                                                if (dobj.picture && dobj.status_type !== "shared_story")
+                                                        picture = "<img src='"+dobj.picture+"'>";
+                                                else if (dobj.name)
+                                                        picture = dobj.name;
+                                                else
+                                                        picture = "picture link";
+                                                html += "<div apptype='photo'><a target='_blank' href='"+dobj.link+"'>" + picture + "</a></div>\n";
+                                        }
+                                        if (dobj.description)
+                                        {
+                                                var desc = dobj.description.replaceAll('\\n', '<BR>');
+                                                html += "<div apptype='description'><p>" + desc + "</p></div>\n";
+                                        }
+                                        if (dobj.message)
+                                        {
+                                                var msg = dobj.message.replaceAll('\\n', '<BR>');
+                                                html += "<div apptype='message'><p>" + msg + "</p></div>\n";
+                                        }
+                                        if (dobj.source)
+                                                html += "<div apptype='source'><a href='"+dobj.source+"'>" + dobj.source + "</a></div>\n";
+                                        html += "<BR>\n";
+                                }
+                        });
+                        html += "</div>\n";
+                }
+                else if (data.error)
+                {
+                        //alert("got error");
+                        html = "message: " + data.error.message + "<BR>\n";
+                }
+                else
+                {
+                        //alert("got nothin");
+                        html = "Unknown error. Can't access posts.<BR>\n";
+                }
+                $("#posts").append(html);
         })
         .error(function(jqXHR, msg, err) {
                 $("#posts").append("getCP2HPosts: <PRE>" + $.dump(msg) + ", " + $.dump(err) + "</PRE>");
