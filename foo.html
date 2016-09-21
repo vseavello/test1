@@ -59,13 +59,13 @@ function getCP2HPosts()
                 if (data)
                 {
                         html = "<div class='news'>\n";
-			/*
                         $(data).each(function(idx, dobj) {
                                 //if (idx < 2)
                                 {
                                         if (idx > 0)
                                                 html += "<HR>\n";
-                                        //html += "<PRE>" + $.dump(dobj) + "\n</PRE>\n";
+                                        html += "<PRE>" + $.dump(dobj) + "\n</PRE>\n";
+					/*
                                         if (dobj.updated_time)
                                         {
                                                 var mydt = dobj.updated_time.substr(0, dobj.updated_time.indexOf('+'));
@@ -106,11 +106,13 @@ function getCP2HPosts()
                                         }
                                         if (dobj.source)
                                                 html += "<div apptype='source'><a href='"+dobj.source+"'>" + dobj.source + "</a></div>\n";
+					*/
                                         html += "<BR>\n";
                                 }
                         });
-			*/
+			/*
 			html += "hello to you";
+			*/
                         html += "</div>\n";
                 }
                 else if (data.error)
